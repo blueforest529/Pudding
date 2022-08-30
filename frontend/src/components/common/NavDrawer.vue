@@ -1,9 +1,6 @@
 <template>
     <div>
-        <v-navigation-drawer
-        v-model="drawer"
-        app
-        >
+        <v-navigation-drawer v-model="drawer" app>
             <v-list-item>
                 <v-list-item-icon>
                     <v-icon>mdi-home</v-icon>
@@ -37,13 +34,13 @@
                     </v-list-item>
                 </v-list-item-group>
             </v-list>
-            
-            <template v-slot:append>
-                <div class="pa-2">
-                    hello
-                </div>
-            </template>
         </v-navigation-drawer>
+
+        <div style="float:left; margin-left:10px; margin-top:350px; margin-bottom:350px;">
+            <v-icon large color="#367fc4" @click="drawer = menuclick()">
+                {{icon}}
+            </v-icon>
+        </div>
 
     </div>
 </template>
@@ -51,7 +48,8 @@
 <script>
   export default {
     data: () => ({ 
-        drawer: null,
+        drawer: false,
+        icon : 'mdi-chevron-right',
         menus: [
             {
                 icon: 'mdi-view-dashboard',
@@ -82,6 +80,15 @@
         model: [{to: '/'}],
     }),
     methods: {
+        menuclick() {
+            if (this.drawer) {
+                this.icon = 'mdi-chevron-right';
+            } else {
+                this.icon = 'mdi-chevron-left';
+            }
+
+            return !this.drawer
+        }
     }
   }
 </script>
@@ -92,7 +99,7 @@
 }
 
 .red_list .v-list-item-group .v-list-item--active{
-  background-color: #EF6C00;
+  background-color: #367fc4;
   color: white;
 }
 </style>

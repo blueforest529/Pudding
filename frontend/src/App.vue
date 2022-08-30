@@ -1,17 +1,13 @@
 <template>
   <v-app>
-    <nav-drawer ></nav-drawer>
-
-    <v-app-bar app>
-      디자인이 고민이고만,,
-    </v-app-bar>
-
-    <v-main>
-      <v-container fluid>
-        <router-view></router-view>
-      </v-container>
-    </v-main>
-
+    <div>
+      <v-main>
+        <nav-drawer></nav-drawer>
+        <v-container fluid>
+          <router-view></router-view>
+        </v-container>
+      </v-main>
+    </div>
   </v-app>
 </template>
 
