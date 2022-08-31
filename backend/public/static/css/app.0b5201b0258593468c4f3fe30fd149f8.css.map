@@ -1,1 +1,0 @@
-{"version":3,"sources":["app.0b5201b0258593468c4f3fe30fd149f8.css"],"names":[],"mappings":"AACA,MACI,UACJ,CACA,kDACE,wBAAyB,CACzB,UACF","file":"app.0b5201b0258593468c4f3fe30fd149f8.css","sourcesContent":["\n.lsls {\r\n    color:lime;\n}\n.red_list .v-list-item-group .v-list-item--active{\r\n  background-color: #367fc4;\r\n  color: white;\n}\r\n"]}
