@@ -6,6 +6,6 @@ module.exports = defineConfig({
   transpileDependencies: [
     'vuetify'
   ],
-  lintOnSave: false,
-  outputDir: path.resolve(dirname, '../backend/dist')
+  lintOnSave: false
+  // outputDir: path.resolve(dirname, '../backend/dist')
 })
